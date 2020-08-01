@@ -1,10 +1,10 @@
 
-<%- include('partials/header.ejs')%>
+<%- include('../../partials/header.ejs')%>
 
 <!-- Page Wrapper -->
 		<div id="wrapper">
 			<!-- Sidebar -->
-		<%- include('partials/sidebar.ejs')%>
+		<%- include('../../partials/sidebar.ejs')%>
 			<!-- End of Sidebar -->
 
 			<!-- Content Wrapper -->
@@ -12,21 +12,29 @@
 				<!-- Main Content -->
 				<div id="content">
 					<!-- Topbar -->
-					<%- include('partials/navbar.ejs')%>
+					<%- include('../../partials/navbar.ejs')%>
 
 					<!-- End of Topbar -->
 
 					<!-- Begin Page Content -->
 					<div class="container-fluid">
 						<!-- Page Heading -->
-						<h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+						<h1 class="h3 mb-4 text-gray-800">Dashboard - Booking</h1>
+						<!-- End of Page Heading -->
+						
+					
+			<!-- DataTales Example -->
+					<%- include('table_booking.ejs') %>
+
+
+
 					</div>
 					<!-- /.container-fluid -->
 				</div>
 				<!-- End of Main Content -->
 
 				<!-- Footer -->
-				<%- include('partials/footer.ejs')%>
+				<%- include('../../partials/footer.ejs')%>
 				<!-- End of Footer -->
 			</div>
 			<!-- End of Content Wrapper -->
@@ -78,6 +86,6 @@
 		</div>
 
 		<!-- Javascript -->
-		<%- include('partials/js.ejs')%>
+		<%- include('../../partials/js.ejs')%>
 	</body>
 </html>
