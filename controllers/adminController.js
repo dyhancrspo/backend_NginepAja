@@ -14,7 +14,8 @@ module.exports = {
 		});
 	},
 
-	// Category
+	// Category //
+	// View Category
 	viewCategory: async (req, res) => {
 		try {
 			const category = await Category.find();
@@ -32,6 +33,7 @@ module.exports = {
 			res.redirect("/admin/category");
 		}
 	},
+	// Create Category / Add
 	addCategory: async (req, res) => {
 		try {
 			const { name } = req.body;
@@ -44,6 +46,7 @@ module.exports = {
 		req.flash("alertStatus", `danger`);
 		res.redirect("/admin/category");
 	},
+	// Update Category
 	editCategory: async (req, res) => {
 		try {
 			const { id, name } = req.body;
@@ -59,6 +62,7 @@ module.exports = {
 			res.redirect("/admin/category");
 		}
 	},
+	// Delete Category
 	deleteCategory: async (req, res) => {
 		try {
 			const { id } = req.params;
@@ -74,7 +78,7 @@ module.exports = {
 		}
 	},
 
-	// Bank
+	// Bank //
 	viewBank: async (req, res) => {
 		try {
 			const bank = await Bank.find();
@@ -92,6 +96,7 @@ module.exports = {
 			res.redirect("/admin/bank");
 		}
 	},
+	// Create Bank / Add
 	addBank: async (req, res) => {
 		try {
 			const { name, bankName, bankNumber } = req.body;
@@ -111,6 +116,7 @@ module.exports = {
 			res.redirect("/admin/bank");
 		}
 	},
+	// Update Bank
 	editBank: async (req, res) => {
 		try {
 			const { id, name, bankName, bankNumber } = req.body;
@@ -140,6 +146,7 @@ module.exports = {
 			res.redirect("/admin/bank");
 		}
 	},
+	// Update Category
 	deleteBank: async (req, res) => {
 		try {
 			const { id } = req.params;
