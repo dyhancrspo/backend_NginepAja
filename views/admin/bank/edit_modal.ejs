@@ -1,7 +1,7 @@
 <!-- Modal -->
 <div
 	class="modal fade"
-	id="add-modal"
+	id="edit-modal"
 	tabindex="-1"
 	role="dialog"
 	aria-labelledby="exampleModalLabel"
@@ -10,7 +10,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Add Data Bank</h5>
+				<h5 class="modal-title" id="exampleModalLabel">Update Data Bank</h5>
 				<button
 					type="button"
 					class="close"
@@ -20,13 +20,17 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<form action="/admin/bank" method="POST" enctype="multipart/form-data">
+			<form
+				action="/admin/bank?_method=PUT"
+				method="POST"
+				enctype="multipart/form-data"
+			>
 				<div class="modal-body">
 					<div class="form-group">
 						<label for="name">Bank Name</label>
 						<input
 							type="text"
-							class="form-control"
+							class="form-control bankName"
 							name="bankName"
 							placeholder="Enter bank name"
 							required
@@ -36,7 +40,7 @@
 						<label for="name">Account Number</label>
 						<input
 							type="text"
-							class="form-control"
+							class="form-control bankNumber"
 							name="bankNumber"
 							placeholder="Enter account number"
 							required
@@ -46,7 +50,7 @@
 						<label for="name">Name</label>
 						<input
 							type="text"
-							class="form-control"
+							class="form-control name"
 							name="name"
 							placeholder="Enter name"
 							required
@@ -54,7 +58,10 @@
 					</div>
 					<div class="form-group">
 						<label for="name">Image</label>
-						<input type="file" class="form-control" name="image" required />
+						<input type="file" class="form-control" name="image" />
+						<span>
+							Select an Image to Update
+						</span>
 					</div>
 				</div>
 				<div class="modal-footer">
