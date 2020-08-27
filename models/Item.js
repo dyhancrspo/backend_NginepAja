@@ -14,7 +14,7 @@ const itemSchema = new mongoose.Schema({
 		type: String,
 		default: "Indonesia",
 	},
-	cities: {
+	city: {
 		type: String,
 		required: true,
 	},
@@ -30,18 +30,24 @@ const itemSchema = new mongoose.Schema({
 		type: ObjectId,
 		ref: "Category",
 	},
-	imageId: {
-		type: ObjectId,
-		ref: "Image",
-	},
-	featureId: {
-		type: ObjectId,
-		ref: "Feature",
-	},
-	activityId: {
-		type: ObjectId,
-		ref: "Activity",
-	},
+	imageId: [
+		{
+			type: ObjectId,
+			ref: "Image",
+		},
+	],
+	featureId: [
+		{
+			type: ObjectId,
+			ref: "Feature",
+		},
+	],
+	activityId: [
+		{
+			type: ObjectId,
+			ref: "Activity",
+		},
+	],
 });
 
 module.exports = mongoose.model("Item", itemSchema);

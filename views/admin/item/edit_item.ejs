@@ -1,6 +1,6 @@
 <div
-	class="tab-pane fade"
-	id="add-item"
+	class="tab-pane fade show active"
+	id="edit-item"
 	role="tabpanel"
 	aria-labelledby="profile-tab"
 >
@@ -9,7 +9,7 @@
 			<div class="card shadow mb-4 mt-2">
 				<div class="card-body">
 					<form
-						action="/admin/item"
+						action="/admin/item/<%= item.id %>?_method=PUT"
 						method="POST"
 						enctype="multipart/form-data"
 					>
@@ -19,6 +19,7 @@
 								type="text"
 								class="form-control"
 								name="title"
+								value="<%= item.title %>"
 								placeholder="Enter title"
 								required
 							/>
@@ -29,6 +30,7 @@
 								type="number"
 								class="form-control"
 								name="price"
+								value="<%= item.price %>"
 								placeholder="Enter price"
 								required
 							/>
@@ -39,6 +41,7 @@
 								type="text"
 								class="form-control"
 								name="city"
+								value="<%= item.city %>"
 								placeholder="Enter city"
 								required
 							/>
@@ -46,7 +49,9 @@
 						<div class="form-group">
 							<label for="name">Category</label>
 							<select class="form-control" name="categoryId">
-								<option value="">--- Category ---</option>
+								<option value="<%= item.categoryId._id %>">
+									--- <%= item.categoryId.name %> ---
+								</option>
 								<% for(let i = 0; i < category.length; i++){ %>
 								<option value="<%= category[i].id %>">
 									<%= category[i].name %>
@@ -56,17 +61,14 @@
 						</div>
 						<div class="form-group">
 							<label for="name">Image</label>
-							<input
-								type="file"
-								class="form-control"
-								name="image"
-								multiple
-								required
-							/>
+							<input type="file" class="form-control" name="image" multiple />
 						</div>
 						<div class="form-group">
 							<label for="name">Description</label>
-							<textarea name="about" class="form-control"></textarea>
+							<textarea name="about" class="form-control">
+								<%= item.description %>
+							</textarea
+							>
 						</div>
 						<button type="submit" class="btn btn-primary">Save</button>
 					</form>
