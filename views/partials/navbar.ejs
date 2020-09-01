@@ -63,11 +63,11 @@
 				aria-expanded="false"
 			>
 				<span class="mr-2 d-none d-lg-inline text-gray-600 small"
-					>Dyhan Haqnas Crespo</span
-				>
+					><%= user.username %>
+				</span>
 				<img
 					class="img-profile rounded-circle"
-					src="https://source.unsplash.com/QAB-WJcbgJk/60x60"
+					src="https://source.unsplash.com/3B6RfJQKBEM/60x60"
 				/>
 			</a>
 			<!-- Dropdown - User Information -->
@@ -75,12 +75,7 @@
 				class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 				aria-labelledby="userDropdown"
 			>
-				<a
-					class="dropdown-item"
-					href="#"
-					data-toggle="modal"
-					data-target="#logoutModal"
-				>
+				<a class="dropdown-item" href="/admin/logout">
 					<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
 					Logout
 				</a>

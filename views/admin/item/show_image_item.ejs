@@ -6,7 +6,7 @@
 >
 	<!-- DataTales Example -->
 	<div class="card shadow mb-4">
-		<div class="card-header py-3">
+		<div class="card-header py-3 animated--grow-in">
 			<div class="row">
 				<% for(let x = 0; x < item.imageId.length; x++) { %>
 				<div class="col-md-4">
@@ -15,7 +15,7 @@
 							<img
 								src="http://localhost:3000/<%= item.imageId[x].imageUrl %>"
 								alt="image"
-								style="width: 100%; display: block; height: 200px;"
+								style="width: 100%; display: block; height: 200px"
 							/>
 						</div>
 					</div>

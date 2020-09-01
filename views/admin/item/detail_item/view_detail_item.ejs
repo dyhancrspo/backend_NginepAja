@@ -20,7 +20,7 @@
 						<%- include('../../../partials/message.ejs') %>
 
 						<!-- Page Heading -->
-						<h1 class="h3 mb-4 text-gray-800">Detail Item</h1>
+						<h1 class="h3 mb-4 text-gray-800 animated--fade-in">Detail Item</h1>
 						<!-- End Heading -->
 				
 						<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -92,7 +92,7 @@
 						>
 							Cancel
 						</button>
-						<a class="btn btn-primary" href="login.html">Logout</a>
+						<a class="btn btn-primary" href="/admin/logout">Logout</a>
 					</div>
 				</div>
 			</div>
@@ -119,7 +119,7 @@
 				let id = $(this).data('id');
 				let name = $(this).data('name');
 				let qty = $(this).data('qty');
-				console.log(id + name + qty)
+				// console.log(id + name + qty)
 				$('#edit-modal-feature').modal('show');
 				$('.id').val(id);
 				$('.name').val(name);
@@ -130,7 +130,7 @@
 				let id = $(this).data('id');
 				let name = $(this).data('name');
 				let type = $(this).data('type');
-				console.log(id + name + type)
+				// console.log(id + name + type)
 				$('#edit-modal').modal('show');
 				$('.id').val(id);
 				$('.name').val(name);

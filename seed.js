@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-	"mongodb+srv://codeathome:bwamern@cluster0-40j6e.mongodb.net/db_staycation?retryWrites=true&w=majority",
+	"mongodb://localhost/db_nginepaja",
 	{
 		useNewUrlParser: true,
 		useCreateIndex: true,
@@ -515,16 +515,16 @@ var data = [
 		documents: [
 			{
 				_id: mongoose.Types.ObjectId("5e96cbe292b97300fc903322"),
-				nameBank: "Mandiri",
-				nomorRekening: "089898",
-				name: "elfin",
+				bankName: "Mandiri",
+				bankNumber: "16720051997",
+				name: "Dyhan Haqnas",
 				imageUrl: "images/9999999999.png",
 			},
 			{
 				_id: mongoose.Types.ObjectId("5e96cbe292b97300fc903323"),
-				nameBank: "BCA",
-				nomorRekening: "878678",
-				name: "elfin",
+				bankName: "BCA",
+				bankNumber: "4840064315",
+				name: "Cindi Aprianti",
 				imageUrl: "images/9999999999.png",
 			},
 		],

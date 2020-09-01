@@ -35,8 +35,9 @@ app.use(
 		secret: "keyboard cat",
 		resave: false,
 		saveUninitialized: true,
-		cookie: { maxAge: 60000 },
-	})
+		cookie: { maxAge: 3600000 }, // 1 hour
+		// cookie: { maxAge: 60000 },
+	}),
 );
 app.use(flash());
 app.use(logger("dev"));
@@ -46,7 +47,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(
 	"/sb-admin-2/",
-	express.static(path.join(__dirname, "node_modules/startbootstrap-sb-admin-2"))
+	express.static(
+		path.join(__dirname, "node_modules/startbootstrap-sb-admin-2"),
+	),
 );
 app.use("/", indexRouter);
 app.use("/users", usersRouter);

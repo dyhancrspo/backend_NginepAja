@@ -21,7 +21,7 @@
 						<%- include('../../partials/message.ejs') %>
 
 						<!-- Page Heading -->
-						<h1 class="h3 mb-4 text-gray-800">Dashboard - Item</h1>
+						<h1 class="h3 mb-4 text-gray-800 animated--fade-in">Dashboard - Item</h1>
 						<!-- End of Page Heading -->
 						
 						<% if(action == "view") { %>
@@ -46,11 +46,14 @@
 									<li class="nav-item">
 										<a class="nav-link active" id="home-tab" data-toggle="tab" href="#show-image" role="tab" aria-controls="home" aria-selected="true">Show Image</a>
 									</li>
-									<li class="nav-item ml-2">
-										<a href="/admin/item#add-item" class="btn btn-warning">Add</a>
-									</li>
-									<li class="nav-item ml-2">
-										<a href="/admin/item" class="btn btn-danger">Back</a>
+								
+									<li class="nav-item" style="margin-left: 720px">
+										<a href="/admin/item" class="btn btn-danger btn-icon-split">
+											<span class="icon text-white-50">
+												<i class="fas fa-exclamation-triangle"></i>
+											</span>
+											<span class="text">Back</span>
+										</a>
 									</li>
 								</ul>							
 								<div class="tab-content" id="myTabContent">
@@ -121,7 +124,7 @@
 						>
 							Cancel
 						</button>
-						<a class="btn btn-primary" href="login.html">Logout</a>
+						<a class="btn btn-primary" href="/admin/logout">Logout</a>
 					</div>
 				</div>
 			</div>
