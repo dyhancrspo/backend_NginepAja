@@ -266,7 +266,7 @@ var data = [
 			{
 				// done
 				_id: mongoose.Types.ObjectId("5e96cbe292b97300fc90aa01"),
-				name: "badroom",
+				name: "bedroom",
 				qty: 2,
 				imageUrl: "images/feature-1.png",
 				itemId: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
@@ -535,6 +535,11 @@ var data = [
 			{
 				_id: mongoose.Types.ObjectId("5e96cbe292b97300fc903345"),
 				username: "admin",
+				password: "rahasia",
+			},
+			{
+				_id: mongoose.Types.ObjectId("5e96cbe292b97300fc903346"),
+				username: "geligeli",
 				password: "rahasia",
 			},
 		],

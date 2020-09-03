@@ -30,8 +30,8 @@ router.delete("/bank/:id", adminController.deleteBank);
 router.get("/item", adminController.viewItem);
 router.post("/item", uploadMultiple, adminController.addItem);
 router.get("/item/show-image/:id", adminController.showImageItem);
-router.get("/item/show-detail-item/:itemId", adminController.viewDetailItem); // Endpoint Detail Item
 router.get("/item/:id", adminController.editItem);
+router.get("/item/show-detail-item/:itemId", adminController.viewDetailItem); // Endpoint Detail Item
 router.put("/item/:id", uploadMultiple, adminController.saveEditItem);
 router.delete("/item/:id/delete", adminController.deleteItem);
 

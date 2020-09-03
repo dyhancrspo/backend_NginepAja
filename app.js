@@ -21,7 +21,8 @@ var usersRouter = require("./routes/users");
 
 //  Router Admin
 const adminRouter = require("./routes/admin");
-// const adminController = require("./controllers/adminController");
+// Router API
+const apiRouter = require("./routes/api");
 
 var app = express();
 
@@ -56,6 +57,8 @@ app.use("/users", usersRouter);
 
 // Admin
 app.use("/admin", adminRouter);
+// Api
+app.use("/api/v1/member", apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
