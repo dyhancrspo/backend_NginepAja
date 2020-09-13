@@ -2,7 +2,7 @@
 
 # dependencies
 **/node_modules/*
-!**/node_modules/startbootstrap-sb-admin-2/css
+!**/node_modules/startbootstrap-sb-admin-2/
 /.pnp
 .pnp.js
 
