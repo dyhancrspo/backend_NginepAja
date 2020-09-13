@@ -252,7 +252,7 @@ module.exports = {
 			const alertStatus = req.flash("alertStatus");
 			const alert = { message: alertMessage, status: alertStatus };
 			res.render("admin/item/view_item", {
-				title: "Geligeli | Item",
+				title: "Geligeli - Item",
 				category,
 				alert,
 				item,
