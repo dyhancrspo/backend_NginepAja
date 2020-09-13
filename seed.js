@@ -3,13 +3,21 @@ var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
 seeder.connect(
-	"mongodb://localhost/db_nginepaja",
+	"mongodb+srv://devdyhan:dyhan2005.@cluster0.onuni.mongodb.net/db_geligeli?retryWrites=true&w=majority",
 	{
 		useNewUrlParser: true,
 		useCreateIndex: true,
 		useFindAndModify: true,
 		useUnifiedTopology: true,
 	},
+	// seeder.connect(
+	// 	"mongodb://localhost/db_nginepaja",
+	// 	{
+	// 		useNewUrlParser: true,
+	// 		useCreateIndex: true,
+	// 		useFindAndModify: true,
+	// 		useUnifiedTopology: true,
+	// 	},
 	function () {
 		// Load Mongoose models
 		seeder.loadModels([
